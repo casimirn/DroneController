@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Timers;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -15,11 +8,15 @@ namespace Drone_Organizer
 {
     public partial class Form1 : Form
     {
+        /********************************************************************
+        Variables
+        ********************************************************************/
         public static int NumRows;
         public static int NumCols;
         public static int DefaultRed;
         public static int DefaultGreen;
         public static int DefaultBlue;
+        public static int FrameNumber;
 
         private Graphics graphics;
         private int PixelsPerMeter;
@@ -35,6 +32,9 @@ namespace Drone_Organizer
 
         private Point previousCursorPos;
 
+        /********************************************************************
+        Initialization
+        ********************************************************************/
         public Form1()
         {
             InitializeComponent();
@@ -44,6 +44,8 @@ namespace Drone_Organizer
             DefaultRed = 255;
             DefaultGreen = 255;
             DefaultBlue = 255;
+            FrameNumber = 0;
+
             PixelsPerMeter = 100;
             MetersBetweenDrones = 1;
             DroneSizeInMeters = .5;
@@ -53,15 +55,13 @@ namespace Drone_Organizer
             RefreshTimer.Enabled = false;
             RefreshTimer.AutoReset = true;
             RefreshTimer.Elapsed += RefreshTimerElapsed;
+
+            XMLGenerator.init();
         }
 
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NewArray newArray = new NewArray();
-            if (newArray.ShowDialog() == DialogResult.OK)
-                GenerateDrones();
-        }
-
+        /********************************************************************
+        Functions that draw drones
+        ********************************************************************/
         public void GenerateDrones()
         {
             graphics.Clear(SystemColors.Control);
@@ -152,6 +152,9 @@ namespace Drone_Organizer
             drone.IsDrawn = false;
         }
 
+        /********************************************************************
+        Timer Event Handlers
+        ********************************************************************/
         private void RefreshTimerElapsed(Object source, System.Timers.ElapsedEventArgs e)
         {
             if (Dragging)
@@ -166,6 +169,9 @@ namespace Drone_Organizer
             }
         }
 
+        /********************************************************************
+        Mouse Event Handlers
+        ********************************************************************/
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             if (Dragging)
@@ -207,6 +213,36 @@ namespace Drone_Organizer
             {
                 Dragging = false;
             }
+        }
+
+        /********************************************************************
+        Menu Item Event Handlers
+        ********************************************************************/
+        private void NewArrayMenuItem_Click(object sender, EventArgs e)
+        {
+            NewArray newArray = new NewArray();
+            if (newArray.ShowDialog() == DialogResult.OK)
+                GenerateDrones();
+        }
+
+        private void NewFrameMenuItem_Click(object sender, EventArgs e)
+        {
+            NewFrame newFrame = new NewFrame();
+            if (newFrame.ShowDialog() == DialogResult.OK)
+            {
+                XMLGenerator.StoreFrame(FrameNumber, drones, NumRows, NumCols);
+            }
+        }
+
+        private void GenerateXMLMenuItem_Click(object sender, EventArgs e)
+        {
+            XMLGenerator.StoreFrame(FrameNumber, drones, NumRows, NumCols);
+            XMLGenerator.CreateXml();
+        }
+
+        private void SaveMenuItem_Click(object sender, EventArgs e)
+        {
+            XMLGenerator.StoreFrame(FrameNumber, drones, NumRows, NumCols);
         }
     }
 }

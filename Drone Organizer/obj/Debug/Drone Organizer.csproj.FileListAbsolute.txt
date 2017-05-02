@@ -8,3 +8,4 @@ C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\D
 C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone Organizer.pdb
 C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone_Organizer.NewArray.resources
 C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone Organizer.csprojResolveAssemblyReference.cache
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone_Organizer.NewFrame.resources

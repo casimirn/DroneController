@@ -53,11 +53,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="XMLGenerator.cs" />
     <Compile Include="NewArray.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewArray.Designer.cs">
       <DependentUpon>NewArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFrame.Designer.cs">
+      <DependentUpon>NewFrame.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +73,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewArray.resx">
       <DependentUpon>NewArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFrame.resx">
+      <DependentUpon>NewFrame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
