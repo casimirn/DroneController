@@ -1,0 +1,10 @@
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\bin\Debug\Drone Organizer.exe.config
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\bin\Debug\Drone Organizer.exe
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\bin\Debug\Drone Organizer.pdb
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone_Organizer.Form1.resources
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone_Organizer.Properties.Resources.resources
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone Organizer.csproj.GenerateResource.Cache
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone Organizer.exe
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone Organizer.pdb
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone_Organizer.NewArray.resources
+C:\Users\nolan\Desktop\drone\C# Test\Drone Organizer\Drone Organizer\obj\Debug\Drone Organizer.csprojResolveAssemblyReference.cache
